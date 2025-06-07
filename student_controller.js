@@ -4,8 +4,8 @@ const Student = require('./student_schema'); // Import the Student model
 
 // Create a new student
 const registerStudent = async (req, res) => {
-    try {const { firstName, lastName, age, studentClass } = req.body;
-
+    const { firstName, lastName, age, studentClass } = req.body;
+    try {
     // Ccheck if student already exists
     const existingStudent = await Student.findOne({ firstName, lastName });
     if (existingStudent) {
