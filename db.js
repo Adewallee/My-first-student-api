@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// Function to connect to MongoDB
+// This function will be called in index.js to establish the connection
 const connectDB = async () => {
     try {
         await mongoose.connect('mongodb://localhost:27017/myFirstDB', {
@@ -11,4 +13,4 @@ const connectDB = async () => {
     }
 };
 
-module.exports = connectDB; // ✅ Proper export as a function
+module.exports = connectDB; // Export as a function
